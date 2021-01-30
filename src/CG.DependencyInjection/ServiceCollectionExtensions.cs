@@ -63,6 +63,48 @@ namespace Microsoft.Extensions.DependencyInjection
         // *******************************************************************
 
         /// <summary>
+        /// This method registers a factory with the specified service lifetime.
+        /// </summary>
+        /// <typeparam name="TService">The service type to use for the operation.</typeparam>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="implementationFactory">The implementation factory to
+        /// use for the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>The value of the <paramref name="serviceCollection"/>
+        /// parameter, for chaining calls together.</returns>
+        public static IServiceCollection Add<TService>(
+            this IServiceCollection serviceCollection,
+            Func<IServiceProvider, TService> implementationFactory,
+            ServiceLifetime serviceLifetime
+            ) where TService : class
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection))
+                .ThrowIfNull(implementationFactory, nameof(implementationFactory));
+
+            // Register the factory.
+            switch (serviceLifetime)
+            {
+                case ServiceLifetime.Scoped:
+                    serviceCollection.AddScoped<TService>(implementationFactory);
+                    break;
+                case ServiceLifetime.Singleton:
+                    serviceCollection.AddSingleton<TService>(implementationFactory);
+                    break;
+                case ServiceLifetime.Transient:
+                    serviceCollection.AddTransient<TService>(implementationFactory);
+                    break;
+            }
+
+            // Return the service collection.
+            return serviceCollection;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
         /// This method registers a service and implementation the specified 
         /// service lifetime.
         /// </summary>
