@@ -1,18 +1,13 @@
 # CG.DependencyInjection: 
 ---
-[![Build Status](https://dev.azure.com/codegator/CG.DependencyInjection/_apis/build/status/CodeGator.CG.DependencyInjection?branchName=master)](https://dev.azure.com/codegator/CG.DependencyInjection/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/codegator/CG.DependencyInjection/_apis/build/status/CodeGator.CG.DependencyInjection?branchName=main)](https://dev.azure.com/codegator/CG.DependencyInjection/_build/latest?definitionId=44&branchName=main)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.DependencyInjection/)
 [![NuGet downloads](https://img.shields.io/nuget/dt/CG.DependencyInjection.svg?style=flat)](https://nuget.org/packages/CG.DependencyInjection)
-![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.DependencyInjection/1)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.DependencyInjection/44)
 [![Github discussion](https://img.shields.io/badge/Discussion-online-blue)](https://github.com/CodeGator/CG.DependencyInjection/discussions)
 
 #### What does it do?
 The package contains dependency injection extension used by other CodeGator packages.
-
-#### Commonly used types:
-* CG.DependencyInjection.IGuard
-* CG.DependencyInjection.Guard
-* CG.DependencyInjection.GuardExtensions
 
 #### What platform(s) does it support?
 * .NET Standard 2.x or higher
