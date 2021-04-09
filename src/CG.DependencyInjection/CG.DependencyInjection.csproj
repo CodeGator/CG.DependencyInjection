@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net5.0</TargetFrameworks>
     <RootNamespace>CG.DependencyInjection</RootNamespace>
     <Authors>Martin Cook</Authors>
     <Company>CodeGator</Company>
     <Description>This package contains parameter validation used by other CodeGator packages. 
 
 Platforms supported:
-      .NET Standard 2.0 or above</Description>
+      .NET 5.x or above</Description>
     <Copyright>Copyright © 2021 by CodeGator. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/CodeGator/CG.DependencyInjection</PackageProjectUrl>
@@ -20,7 +20,7 @@ Platforms supported:
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.0\CG.DependencyInjection.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net5.0\CG.DependencyInjection.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
@@ -28,9 +28,9 @@ Platforms supported:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Validations" Version="2021.1.2" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.11" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37">
+    <PackageReference Include="CG.Validations" Version="2021.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.194">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
