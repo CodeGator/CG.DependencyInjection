@@ -5,7 +5,7 @@
     <RootNamespace>CG.DependencyInjection</RootNamespace>
     <Authors>Martin Cook</Authors>
     <Company>CodeGator</Company>
-    <Description>This package contains parameter validation used by other CodeGator packages. 
+    <Description>This package contains dependency injection extensions used by other CodeGator packages. 
 
 Platforms supported:
       .NET 5.x or above</Description>
