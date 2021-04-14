@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ServiceCollectionExtensions
    ">
-    <meta name="generator" content="docfx 2.57.0.0">
+    <meta name="generator" content="docfx 2.57.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -548,6 +548,82 @@ parameter, for chaining calls together.</p>
         <td><span class="parametername">TImplementation</span></td>
         <td><p>The implementation type to use for
 the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton*"></a>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton__2_Microsoft_Extensions_DependencyInjection_IServiceCollection___1_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)">TryAddSingleton&lt;TService, TImplementation&gt;(IServiceCollection, TImplementation)</h4>
+  <div class="markdown level1 summary"><p>This method adds a singleton service of the type specified in
+<code data-dev-comment-type="typeparamref" class="typeparamref">TService</code> with an instance specified in the
+<code data-dev-comment-type="paramref" class="paramref">instance</code> parameter, to the specified
+<span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span> object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryAddSingleton&lt;TService, TImplementation&gt;(this IServiceCollection serviceCollection, TImplementation instance)
+    where TService : class where TImplementation : class, TService</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>The service collection to use for
+the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TImplementation</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The implementation instance to use for the
+operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the type was registered successfully; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TService</span></td>
+        <td><p>The type of service to register.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImplementation</span></td>
+        <td><p>The type of implementation to use.</p>
 </td>
       </tr>
     </tbody>

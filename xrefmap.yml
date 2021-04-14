@@ -68,3 +68,19 @@ references:
   fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func(Of System.IServiceProvider, TImplementation), Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   nameWithType: ServiceCollectionExtensions.Add<TService, TImplementation>(IServiceCollection, Func<IServiceProvider, TImplementation>, ServiceLifetime)
   nameWithType.vb: ServiceCollectionExtensions.Add(Of TService, TImplementation)(IServiceCollection, Func(Of IServiceProvider, TImplementation), ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton*
+  name: TryAddSingleton
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton
+  nameWithType: ServiceCollectionExtensions.TryAddSingleton
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
+  name: TryAddSingleton<TService, TImplementation>(IServiceCollection, TImplementation)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton__2_Microsoft_Extensions_DependencyInjection_IServiceCollection___1_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
+  name.vb: TryAddSingleton(Of TService, TImplementation)(IServiceCollection, TImplementation)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
+  nameWithType: ServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(IServiceCollection, TImplementation)
+  nameWithType.vb: ServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(IServiceCollection, TImplementation)
