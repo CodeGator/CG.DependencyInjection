@@ -1,15 +1,14 @@
 ﻿using CG.Validations;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// This class contains extension methods related to the <see cref="IServiceCollection"/>
-    /// type.
+    /// type, for registering types from the <see cref="CG.DependencyInjection"/> 
+    /// library.
     /// </summary>
-    public static partial class ServiceCollectionExtensions
+    public static partial class DependencyInjectionServiceCollectionExtensions
     {
         // *******************************************************************
         // Public methods.
