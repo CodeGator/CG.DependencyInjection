@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection
     /// type, for registering types from the <see cref="CG.DependencyInjection"/> 
     /// library.
     /// </summary>
-    public static partial class DependencyInjectionServiceCollectionExtensions
+    public static partial class ServiceCollectionExtensions
     {
         // *******************************************************************
         // Public methods.
