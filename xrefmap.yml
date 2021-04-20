@@ -7,80 +7,80 @@ references:
   commentId: N:Microsoft.Extensions.DependencyInjection
   fullName: Microsoft.Extensions.DependencyInjection
   nameWithType: Microsoft.Extensions.DependencyInjection
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions
-  name: DependencyInjectionServiceCollectionExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions
-  nameWithType: DependencyInjectionServiceCollectionExtensions
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add(IServiceCollection, Type, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add(IServiceCollection, Type, ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add(IServiceCollection, Type, ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add(IServiceCollection, Type, Type, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add(IServiceCollection, Type, Type, ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add*
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type, System.Type, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add(IServiceCollection, Type, Type, ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*
   name: Add
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add
   isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add
+  nameWithType: ServiceCollectionExtensions.Add
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add<TService>(IServiceCollection, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name.vb: Add(Of TService)(IServiceCollection, ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Of TService)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add<TService>(IServiceCollection, ServiceLifetime)
-  nameWithType.vb: DependencyInjectionServiceCollectionExtensions.Add(Of TService)(IServiceCollection, ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Of TService)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add<TService>(IServiceCollection, ServiceLifetime)
+  nameWithType.vb: ServiceCollectionExtensions.Add(Of TService)(IServiceCollection, ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add<TService>(IServiceCollection, Func<IServiceProvider, TService>, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name.vb: Add(Of TService)(IServiceCollection, Func(Of IServiceProvider, TService), ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func<System.IServiceProvider, TService>, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Of TService)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func(Of System.IServiceProvider, TService), Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add<TService>(IServiceCollection, Func<IServiceProvider, TService>, ServiceLifetime)
-  nameWithType.vb: DependencyInjectionServiceCollectionExtensions.Add(Of TService)(IServiceCollection, Func(Of IServiceProvider, TService), ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add<TService>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func<System.IServiceProvider, TService>, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Of TService)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func(Of System.IServiceProvider, TService), Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add<TService>(IServiceCollection, Func<IServiceProvider, TService>, ServiceLifetime)
+  nameWithType.vb: ServiceCollectionExtensions.Add(Of TService)(IServiceCollection, Func(Of IServiceProvider, TService), ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add<TService, TImplementation>(IServiceCollection, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name.vb: Add(Of TService, TImplementation)(IServiceCollection, ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add<TService, TImplementation>(IServiceCollection, ServiceLifetime)
-  nameWithType.vb: DependencyInjectionServiceCollectionExtensions.Add(Of TService, TImplementation)(IServiceCollection, ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add<TService, TImplementation>(IServiceCollection, ServiceLifetime)
+  nameWithType.vb: ServiceCollectionExtensions.Add(Of TService, TImplementation)(IServiceCollection, ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name: Add<TService, TImplementation>(IServiceCollection, Func<IServiceProvider, TImplementation>, ServiceLifetime)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)
   name.vb: Add(Of TService, TImplementation)(IServiceCollection, Func(Of IServiceProvider, TImplementation), ServiceLifetime)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func<System.IServiceProvider, TImplementation>, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.Add(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func(Of System.IServiceProvider, TImplementation), Microsoft.Extensions.DependencyInjection.ServiceLifetime)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.Add<TService, TImplementation>(IServiceCollection, Func<IServiceProvider, TImplementation>, ServiceLifetime)
-  nameWithType.vb: DependencyInjectionServiceCollectionExtensions.Add(Of TService, TImplementation)(IServiceCollection, Func(Of IServiceProvider, TImplementation), ServiceLifetime)
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton*
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func<System.IServiceProvider, TImplementation>, Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Func(Of System.IServiceProvider, TImplementation), Microsoft.Extensions.DependencyInjection.ServiceLifetime)
+  nameWithType: ServiceCollectionExtensions.Add<TService, TImplementation>(IServiceCollection, Func<IServiceProvider, TImplementation>, ServiceLifetime)
+  nameWithType.vb: ServiceCollectionExtensions.Add(Of TService, TImplementation)(IServiceCollection, Func(Of IServiceProvider, TImplementation), ServiceLifetime)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton*
   name: TryAddSingleton
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_TryAddSingleton_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton
   isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton
-  nameWithType: DependencyInjectionServiceCollectionExtensions.TryAddSingleton
-- uid: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton
+  nameWithType: ServiceCollectionExtensions.TryAddSingleton
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
   name: TryAddSingleton<TService, TImplementation>(IServiceCollection, TImplementation)
-  href: api/Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_DependencyInjectionServiceCollectionExtensions_TryAddSingleton__2_Microsoft_Extensions_DependencyInjection_IServiceCollection___1_
-  commentId: M:Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAddSingleton__2_Microsoft_Extensions_DependencyInjection_IServiceCollection___1_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,``1)
   name.vb: TryAddSingleton(Of TService, TImplementation)(IServiceCollection, TImplementation)
-  fullName: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.DependencyInjectionServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
-  nameWithType: DependencyInjectionServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(IServiceCollection, TImplementation)
-  nameWithType.vb: DependencyInjectionServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(IServiceCollection, TImplementation)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(Microsoft.Extensions.DependencyInjection.IServiceCollection, TImplementation)
+  nameWithType: ServiceCollectionExtensions.TryAddSingleton<TService, TImplementation>(IServiceCollection, TImplementation)
+  nameWithType.vb: ServiceCollectionExtensions.TryAddSingleton(Of TService, TImplementation)(IServiceCollection, TImplementation)
