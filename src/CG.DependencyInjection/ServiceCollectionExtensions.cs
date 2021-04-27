@@ -17,6 +17,56 @@ namespace Microsoft.Extensions.DependencyInjection
         #region Public methods
 
         /// <summary>
+        /// This method attempts to register a factory with the specified 
+        /// service lifetime.
+        /// </summary>
+        /// <typeparam name="TService">The service type to use for the operation.</typeparam>
+        /// <typeparam name="TImplementation">The implementation type to use for
+        /// the operation.</typeparam>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="implementationFactory">The implementation factory to
+        /// use for the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the factory was registered; false otherwise.</returns>
+        public static bool TryAdd<TService, TImplementation>(
+            this IServiceCollection serviceCollection,
+            Func<IServiceProvider, TImplementation> implementationFactory,
+            ServiceLifetime serviceLifetime
+            ) where TService : class
+              where TImplementation : class, TService
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection))
+                .ThrowIfNull(implementationFactory, nameof(implementationFactory));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    typeof(TService),
+                    implementationFactory,
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add<TService, TImplementation>(
+                implementationFactory,
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
         /// This method registers a factory with the specified service lifetime.
         /// </summary>
         /// <typeparam name="TService">The service type to use for the operation.</typeparam>
@@ -57,6 +107,53 @@ namespace Microsoft.Extensions.DependencyInjection
 
             // Return the service collection.
             return serviceCollection;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method attempt to register a factory with the specified service 
+        /// lifetime.
+        /// </summary>
+        /// <typeparam name="TService">The service type to use for the operation.</typeparam>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="implementationFactory">The implementation factory to
+        /// use for the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the factory was registered; false otherwise.</returns>
+        public static bool TryAdd<TService>(
+            this IServiceCollection serviceCollection,
+            Func<IServiceProvider, TService> implementationFactory,
+            ServiceLifetime serviceLifetime
+            ) where TService : class
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection))
+                .ThrowIfNull(implementationFactory, nameof(implementationFactory));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    typeof(TService),
+                    implementationFactory,
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add<TService>(
+                implementationFactory,
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
         }
 
         // *******************************************************************
@@ -104,6 +201,51 @@ namespace Microsoft.Extensions.DependencyInjection
         // *******************************************************************
 
         /// <summary>
+        /// This method attempt to register a service and implementation the 
+        /// specified service lifetime.
+        /// </summary>
+        /// <typeparam name="TService">The service type to use for the operation.</typeparam>
+        /// <typeparam name="TImplementation">The implementation type to use for
+        /// the operation.</typeparam>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the type was registered; false otherwise.</returns>
+        public static bool TryAdd<TService, TImplementation>(
+            this IServiceCollection serviceCollection,
+            ServiceLifetime serviceLifetime
+            ) where TService : class
+              where TImplementation : class, TService
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    typeof(TService),
+                    typeof(TImplementation),
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add<TService, TImplementation>(
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
         /// This method registers a service and implementation the specified 
         /// service lifetime.
         /// </summary>
@@ -141,6 +283,54 @@ namespace Microsoft.Extensions.DependencyInjection
 
             // Return the service collection.
             return serviceCollection;
+        }
+
+        //*******************************************************************
+
+        /// <summary>
+        /// This method attempt to register a service and implementation the 
+        /// specified service lifetime.
+        /// </summary>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="serviceType">The service type to use for the operation.</param>
+        /// <param name="implementationType">The implementation type to use for 
+        /// the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the type was registered; false otherwise.</returns>
+        public static bool TryAdd(
+            this IServiceCollection serviceCollection,
+            Type serviceType,
+            Type implementationType,
+            ServiceLifetime serviceLifetime
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    serviceType,
+                    implementationType,
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add(
+                serviceType,
+                implementationType,
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
         }
 
         //*******************************************************************
@@ -189,6 +379,47 @@ namespace Microsoft.Extensions.DependencyInjection
         //*******************************************************************
 
         /// <summary>
+        /// This method attempts to register a service with the specified 
+        /// service lifetime.
+        /// </summary>
+        /// <typeparam name="TService">The service type to use for the operation.</typeparam>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the type was registered; false otherwise.</returns>
+        public static bool TryAdd<TService>(
+            this IServiceCollection serviceCollection,
+            ServiceLifetime serviceLifetime
+            ) where TService : class
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    typeof(TService),
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add<TService>(
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
+        }
+
+        //*******************************************************************
+
+        /// <summary>
         /// This method registers a service with the specified service lifetime.
         /// </summary>
         /// <typeparam name="TService">The service type to use for the operation.</typeparam>
@@ -222,6 +453,49 @@ namespace Microsoft.Extensions.DependencyInjection
 
             // Return the service collection.
             return serviceCollection;
+        }
+
+        //*******************************************************************
+
+        /// <summary>
+        /// This method attempt to register a service type with the specified
+        /// service lifetime.
+        /// </summary>
+        /// <param name="serviceCollection">The service collection to use for 
+        /// the operation.</param>
+        /// <param name="serviceType">The service type to use for the operation.</param>
+        /// <param name="serviceLifetime">The service lifetime to use for the 
+        /// operation.</param>
+        /// <returns>True if the type was registered; false otherwise.</returns>
+        public static bool TryAdd(
+            this IServiceCollection serviceCollection,
+            Type serviceType,
+            ServiceLifetime serviceLifetime
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection));
+
+            // Is the factory already registered?
+            if (serviceCollection.Contains(
+                new ServiceDescriptor(
+                    serviceType,
+                    serviceLifetime
+                    ))
+                )
+            {
+                // We didn't register the factory.
+                return false;
+            }
+
+            // Defer to the overload.
+            serviceCollection.Add(
+                serviceType,
+                serviceLifetime
+                );
+
+            // We registered the factory.
+            return true;
         }
 
         //*******************************************************************
