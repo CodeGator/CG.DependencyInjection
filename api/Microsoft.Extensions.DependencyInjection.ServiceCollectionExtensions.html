@@ -84,8 +84,7 @@
   <h1 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions" class="text-break">Class ServiceCollectionExtensions
   </h1>
   <div class="markdown level0 summary"><p>This class contains extension methods related to the <span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span>
-type, for registering types from the <span class="xref">CG.DependencyInjection</span>
-library.</p>
+type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -126,7 +125,7 @@ library.</p>
   <h3 id="methods">Methods
   </h3>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add(IServiceCollection, Type, ServiceLifetime)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add(IServiceCollection, Type, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>This method registers a service type with the specified service
 lifetime.</p>
 </div>
@@ -153,7 +152,7 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">serviceType</span></td>
         <td><p>The service type to use for the operation.</p>
 </td>
@@ -185,7 +184,7 @@ parameter, for chaining calls together.</p>
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add(IServiceCollection, Type, Type, ServiceLifetime)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_Microsoft_Extensions_DependencyInjection_IServiceCollection_Type_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type,Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add(IServiceCollection, Type, Type, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>This method registers a service and implementation the specified
 service lifetime.</p>
 </div>
@@ -212,13 +211,13 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">serviceType</span></td>
         <td><p>The service type to use for the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">implementationType</span></td>
         <td><p>The implementation type to use for
 the operation.</p>
@@ -246,6 +245,82 @@ operation.</p>
         <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
         <td><p>The value of the <code data-dev-comment-type="paramref" class="paramref">serviceCollection</code>
 parameter, for chaining calls together.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*"></a>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Func_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Func{IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add&lt;TService&gt;(IServiceCollection, Func&lt;IServiceProvider, TService&gt;, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>This method registers a factory with the specified service lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IServiceCollection Add&lt;TService&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TService&gt; implementationFactory, ServiceLifetime serviceLifetime)
+    where TService : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>The service collection to use for
+the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IServiceProvider</span>, TService&gt;</td>
+        <td><span class="parametername">implementationFactory</span></td>
+        <td><p>The implementation factory to
+use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
+        <td><span class="parametername">serviceLifetime</span></td>
+        <td><p>The service lifetime to use for the
+operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><p>The value of the <code data-dev-comment-type="paramref" class="paramref">serviceCollection</code>
+parameter, for chaining calls together.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TService</span></td>
+        <td><p>The service type to use for the operation.</p>
 </td>
       </tr>
     </tbody>
@@ -320,14 +395,14 @@ parameter, for chaining calls together.</p>
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add&lt;TService&gt;(IServiceCollection, Func&lt;IServiceProvider, TService&gt;, ServiceLifetime)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_Func_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Func{IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add&lt;TService, TImplementation&gt;(IServiceCollection, Func&lt;IServiceProvider, TImplementation&gt;, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>This method registers a factory with the specified service lifetime.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection Add&lt;TService&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TService&gt; implementationFactory, ServiceLifetime serviceLifetime)
-    where TService : class</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection Add&lt;TService, TImplementation&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TImplementation&gt; implementationFactory, ServiceLifetime serviceLifetime)
+    where TService : class where TImplementation : class, TService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,7 +422,7 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TService&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IServiceProvider</span>, TImplementation&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The implementation factory to
 use for the operation.</p>
@@ -391,6 +466,12 @@ parameter, for chaining calls together.</p>
       <tr>
         <td><span class="parametername">TService</span></td>
         <td><p>The service type to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImplementation</span></td>
+        <td><p>The implementation type to use for
+the operation.</p>
 </td>
       </tr>
     </tbody>
@@ -471,90 +552,8 @@ the operation.</p>
       </tr>
     </tbody>
   </table>
-  <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_Add__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.Add``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">Add&lt;TService, TImplementation&gt;(IServiceCollection, Func&lt;IServiceProvider, TImplementation&gt;, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>This method registers a factory with the specified service lifetime.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection Add&lt;TService, TImplementation&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TImplementation&gt; implementationFactory, ServiceLifetime serviceLifetime)
-    where TService : class where TImplementation : class, TService</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">serviceCollection</span></td>
-        <td><p>The service collection to use for
-the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TImplementation&gt;</td>
-        <td><span class="parametername">implementationFactory</span></td>
-        <td><p>The implementation factory to
-use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
-        <td><span class="parametername">serviceLifetime</span></td>
-        <td><p>The service lifetime to use for the
-operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><p>The value of the <code data-dev-comment-type="paramref" class="paramref">serviceCollection</code>
-parameter, for chaining calls together.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TService</span></td>
-        <td><p>The service type to use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TImplementation</span></td>
-        <td><p>The implementation type to use for
-the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd(IServiceCollection, Type, ServiceLifetime)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd(IServiceCollection, Type, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>This method attempt to register a service type with the specified
 service lifetime.</p>
 </div>
@@ -581,7 +580,7 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">serviceType</span></td>
         <td><p>The service type to use for the operation.</p>
 </td>
@@ -612,7 +611,7 @@ operation.</p>
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Type_System_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd(IServiceCollection, Type, Type, ServiceLifetime)</h4>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Type_Type_Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd(Microsoft.Extensions.DependencyInjection.IServiceCollection,Type,Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd(IServiceCollection, Type, Type, ServiceLifetime)</h4>
   <div class="markdown level1 summary"><p>This method attempt to register a service and implementation the
 specified service lifetime.</p>
 </div>
@@ -639,13 +638,13 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">serviceType</span></td>
         <td><p>The service type to use for the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Type</span></td>
+        <td><span class="xref">Type</span></td>
         <td><span class="parametername">implementationType</span></td>
         <td><p>The implementation type to use for
 the operation.</p>
@@ -672,6 +671,82 @@ operation.</p>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><p>True if the type was registered; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd*"></a>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_Func_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,Func{IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd&lt;TService&gt;(IServiceCollection, Func&lt;IServiceProvider, TService&gt;, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>This method attempt to register a factory with the specified service
+lifetime.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryAdd&lt;TService&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TService&gt; implementationFactory, ServiceLifetime serviceLifetime)
+    where TService : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>The service collection to use for
+the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IServiceProvider</span>, TService&gt;</td>
+        <td><span class="parametername">implementationFactory</span></td>
+        <td><p>The implementation factory to
+use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
+        <td><span class="parametername">serviceLifetime</span></td>
+        <td><p>The service lifetime to use for the
+operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the factory was registered; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TService</span></td>
+        <td><p>The service type to use for the operation.</p>
 </td>
       </tr>
     </tbody>
@@ -746,15 +821,15 @@ operation.</p>
     </tbody>
   </table>
   <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___0__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``0},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd&lt;TService&gt;(IServiceCollection, Func&lt;IServiceProvider, TService&gt;, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>This method attempt to register a factory with the specified service
-lifetime.</p>
+  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_Func_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,Func{IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd&lt;TService, TImplementation&gt;(IServiceCollection, Func&lt;IServiceProvider, TImplementation&gt;, ServiceLifetime)</h4>
+  <div class="markdown level1 summary"><p>This method attempts to register a factory with the specified
+service lifetime.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryAdd&lt;TService&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TService&gt; implementationFactory, ServiceLifetime serviceLifetime)
-    where TService : class</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool TryAdd&lt;TService, TImplementation&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TImplementation&gt; implementationFactory, ServiceLifetime serviceLifetime)
+    where TService : class where TImplementation : class, TService</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -774,7 +849,7 @@ the operation.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TService&gt;</td>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IServiceProvider</span>, TImplementation&gt;</td>
         <td><span class="parametername">implementationFactory</span></td>
         <td><p>The implementation factory to
 use for the operation.</p>
@@ -817,6 +892,12 @@ operation.</p>
       <tr>
         <td><span class="parametername">TService</span></td>
         <td><p>The service type to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImplementation</span></td>
+        <td><p>The implementation type to use for
+the operation.</p>
 </td>
       </tr>
     </tbody>
@@ -870,88 +951,6 @@ operation.</p>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><p>True if the type was registered; false otherwise.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TService</span></td>
-        <td><p>The service type to use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TImplementation</span></td>
-        <td><p>The implementation type to use for
-the operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd*"></a>
-  <h4 id="Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_TryAdd__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Func_System_IServiceProvider___1__Microsoft_Extensions_DependencyInjection_ServiceLifetime_" data-uid="Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.TryAdd``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,``1},Microsoft.Extensions.DependencyInjection.ServiceLifetime)">TryAdd&lt;TService, TImplementation&gt;(IServiceCollection, Func&lt;IServiceProvider, TImplementation&gt;, ServiceLifetime)</h4>
-  <div class="markdown level1 summary"><p>This method attempts to register a factory with the specified
-service lifetime.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool TryAdd&lt;TService, TImplementation&gt;(this IServiceCollection serviceCollection, Func&lt;IServiceProvider, TImplementation&gt; implementationFactory, ServiceLifetime serviceLifetime)
-    where TService : class where TImplementation : class, TService</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.IServiceCollection</span></td>
-        <td><span class="parametername">serviceCollection</span></td>
-        <td><p>The service collection to use for
-the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.IServiceProvider</span>, TImplementation&gt;</td>
-        <td><span class="parametername">implementationFactory</span></td>
-        <td><p>The implementation factory to
-use for the operation.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></td>
-        <td><span class="parametername">serviceLifetime</span></td>
-        <td><p>The service lifetime to use for the
-operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the factory was registered; false otherwise.</p>
 </td>
       </tr>
     </tbody>

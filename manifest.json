@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html",
-          "hash": "R1thakeQTXnufhf68U5Dwnja6DCLnEr3jKvHufdS9lc="
+          "hash": "SqthPtA/STRkuE62pXiebYAFapLAST5KZUL48Hwbzx0="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html",
-          "hash": "v68LAPBj7wshGrJAbFuHkNoBKqC6WHqeHGKoDZZQmr0="
+          "hash": "HEpcdMovKT9P50jRRiYWjH3dLXFsbDV9Djl7FVNAH68="
         }
       },
       "is_incremental": false,
