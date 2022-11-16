@@ -1,12 +1,9 @@
-﻿using CG.Validations;
-using System;
-
+﻿
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// This class contains extension methods related to the <see cref="IServiceCollection"/>
-    /// type, for registering types from the <see cref="CG.DependencyInjection"/> 
-    /// library.
+    /// type.
     /// </summary>
     public static partial class ServiceCollectionExtensions
     {
@@ -147,7 +144,7 @@ namespace Microsoft.Extensions.DependencyInjection
             }
 
             // Defer to the overload.
-            serviceCollection.Add<TService>(
+            serviceCollection.Add(
                 implementationFactory,
                 serviceLifetime
                 );
@@ -184,13 +181,13 @@ namespace Microsoft.Extensions.DependencyInjection
             switch (serviceLifetime)
             {
                 case ServiceLifetime.Scoped:
-                    serviceCollection.AddScoped<TService>(implementationFactory);
+                    serviceCollection.AddScoped(implementationFactory);
                     break;
                 case ServiceLifetime.Singleton:
-                    serviceCollection.AddSingleton<TService>(implementationFactory);
+                    serviceCollection.AddSingleton(implementationFactory);
                     break;
                 case ServiceLifetime.Transient:
-                    serviceCollection.AddTransient<TService>(implementationFactory);
+                    serviceCollection.AddTransient(implementationFactory);
                     break;
             }
 
@@ -353,7 +350,7 @@ namespace Microsoft.Extensions.DependencyInjection
             Type serviceType,
             Type implementationType,
             ServiceLifetime serviceLifetime
-            ) 
+            )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(serviceCollection, nameof(serviceCollection));
